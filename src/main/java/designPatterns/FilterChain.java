@@ -2,7 +2,8 @@ package designPatterns;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//https://www.jianshu.com/p/5afdbb0c9d81
+//tomcat中的过滤链实现
 public class FilterChain implements Filter {
 	//用List集合来存储过滤规则
 	List<Filter> filters = new ArrayList<Filter>();
