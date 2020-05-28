@@ -16,12 +16,12 @@
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-catalina</artifactId>
-            <version>8.5.29</version>
+            <version>9.0.30</version>
         </dependency>
-
     </dependencies>
 
 </project>
