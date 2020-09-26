@@ -14,10 +14,10 @@ public class TestReflect {
 //			e.printStackTrace();
 //		}
 //		System.out.println(11);
-		Field[] fields = AppDef.class.getFields();
-		for(Field field:fields){
-			System.out.println(field.getInt(null));
-		}
+//		Field[] fields = AppDef.class.getFields();
+//		for(Field field:fields){
+//			System.out.println(field.getInt(null));
+//		}
 		System.out.println(1111);
 	}
 }
