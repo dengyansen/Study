@@ -7,7 +7,7 @@ public class TestFuture {
         //第一种方式
         ExecutorService executor = Executors.newCachedThreadPool();
         Task task = new Task();
-        FutureTask<Integer> futureTask = new FutureTask<Integer>(task);
+        FutureTask<Integer> futureTask = new FutureTask<>(task);
         executor.submit(futureTask);
         System.out.println(futureTask.isDone());
         executor.shutdown();
