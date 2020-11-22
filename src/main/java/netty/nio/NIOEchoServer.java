@@ -18,6 +18,11 @@ public class NIOEchoServer {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         // 绑定8080端口
         serverSocketChannel.bind(new InetSocketAddress(8002));
+
+        //再起一个sercerSocketChannel
+        ServerSocketChannel serverSocketChannel2 = ServerSocketChannel.open();
+        serverSocketChannel2.bind(new InetSocketAddress(8003));
+        serverSocketChannel2.configureBlocking(false);
         // 设置为非阻塞模式
         serverSocketChannel.configureBlocking(false);
         // 将Channel注册到selector上，并注册Accept事件
@@ -37,7 +42,9 @@ public class NIOEchoServer {
             Iterator<SelectionKey> iterator = selectionKeys.iterator();
             while (iterator.hasNext()) {
                 SelectionKey selectionKey = iterator.next();
-                // 如果是accept事件
+                // 如果是accept
+                // 事件
+                System.out.println("this channel is "+selectionKey.channel());
                 if (selectionKey.isAcceptable()) {
                     // 强制转换为ServerSocketChannel
                     ServerSocketChannel ssc = (ServerSocketChannel) selectionKey.channel();
