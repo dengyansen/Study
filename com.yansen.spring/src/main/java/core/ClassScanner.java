@@ -11,7 +11,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public class ClassScanner {
-    public static List<Class<?>> scanClasses(String packageName) throws IOException {
+    public static List<Class<?>> scanClasses(String packageName) throws IOException, ClassNotFoundException {
         List<Class<?>> classList = new ArrayList<>();
         String path = packageName.replace(".","/");
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -26,13 +26,14 @@ public class ClassScanner {
                 //todo
             }
         }
+        classList.forEach( it -> System.out.println(it.getName()));
         return classList;
     }
 
-    private static List<Class<?>> getClassesFromJar(String jarFilePath, String path) throws ClassNotFoundException {
+    private static List<Class<?>> getClassesFromJar(String jarFilePath, String path) throws ClassNotFoundException, IOException {
         List<Class<?>> classes = new ArrayList<>();
-        JarFile jarFIle = new JarFi(jarFilePath);
-        Enumeration<JarEntry> jarEntries = jarFIle.entries();
+        JarFile jarFile = new JarFile(jarFilePath);
+        Enumeration<JarEntry> jarEntries = jarFile.entries();
         while (jarEntries.hasMoreElements()){
             JarEntry jarEntry = jarEntries.nextElement();
             String entryName = jarEntry.getName();

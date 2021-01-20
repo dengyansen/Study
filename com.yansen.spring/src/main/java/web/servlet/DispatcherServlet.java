@@ -1,7 +1,11 @@
 package web.servlet;
 
+import web.handler.HandlerManage;
+import web.handler.MappingHandler;
+
 import javax.servlet.*;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 public class DispatcherServlet implements Servlet {
     @Override
@@ -15,8 +19,21 @@ public class DispatcherServlet implements Servlet {
     }
 
     @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        servletResponse.getWriter().println("test");
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+        res.getWriter().println("test,in");
+        for(MappingHandler mappingHandler: HandlerManage.mappingHandlerList){
+            try {
+                if(mappingHandler.handle(req,res)){
+                    return;
+                }
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
