@@ -2,3 +2,5 @@
 /workspace.xml
 *.class
 *.imp
+.idea/
+.idea/compiler.xml
