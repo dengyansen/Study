@@ -9,13 +9,6 @@ public class TestCountDownLatch {
         CountDownLatch end = new CountDownLatch(nThread);
 
         for(int i = 0;i<nThread;i++){
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    long threadId = Thread.currentThread().getId();
-//                    System.out.println("thread"+thred+"run");
-//                }
-//            }).start();
             new Thread( () ->{
                 long threadId = Thread.currentThread().getId();
                 System.out.println("this thread is "+threadId+ "waiting to run...");
