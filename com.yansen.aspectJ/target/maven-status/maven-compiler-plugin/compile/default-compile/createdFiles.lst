@@ -1,0 +1,5 @@
+aop\otherJarAop\User.class
+aop\Person.class
+aop\BeforePerson.class
+aop\otherJarAop\JsonObjectAspect.class
+aop\AspectTest.class

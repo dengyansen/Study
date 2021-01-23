@@ -23,6 +23,7 @@
     <modules>
         <module>com.yansen.spring</module>
         <module>com.yansen.test</module>
+        <module>com.yansen.aspectJ</module>
     </modules>
     <dependencies>
         <dependency>
@@ -53,5 +54,16 @@
         <artifactId>poi-ooxml</artifactId>
         <version>3.8</version>
         </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.8.13</version>
+        </dependency>
     </dependencies>
+
 </project>
