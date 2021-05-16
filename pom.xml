@@ -24,6 +24,7 @@
         <module>com.yansen.spring</module>
         <module>com.yansen.test</module>
         <module>com.yansen.aspectJ</module>
+        <module>tomcat</module>
     </modules>
     <dependencies>
         <dependency>

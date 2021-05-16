@@ -15,6 +15,7 @@
         <module name="com.yansen.spring" />
         <module name="com.yansen.test" />
         <module name="com.yansen.aspectJ" />
+        <module name="com.yansen.tomcat" />
       </profile>
     </annotationProcessing>
   </component>

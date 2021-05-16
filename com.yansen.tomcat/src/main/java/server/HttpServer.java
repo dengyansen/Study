@@ -1,10 +1,12 @@
-package tomcat;
+package server;
 
+import servlet.ServletProcessor;
+import servlet.StaticResourceProcessor;
 
-import tomcat.servlet.ServletProcessor;
-import tomcat.servlet.StaticResourceProcessor;
-
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -13,7 +15,7 @@ import java.net.Socket;
  * 模仿tomcat写一个http服务器
  */
 public class HttpServer {
-    public static String WEB_ROOT = System.getProperty("user.dir")+"\\tomcat" + File.separator + "webroot";
+    public static String WEB_ROOT = System.getProperty("user.dir")+"\\com.yansen.tomcat" + File.separator + "webroot";
     boolean shutdown = false;
 
     void await() throws IOException {

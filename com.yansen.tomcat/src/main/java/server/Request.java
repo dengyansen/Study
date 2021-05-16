@@ -1,4 +1,4 @@
-package tomcat;
+package server;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletInputStream;
