@@ -18,5 +18,8 @@
         <module name="com.yansen.tomcat" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.yansen.tomcat" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

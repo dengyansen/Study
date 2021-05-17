@@ -3,6 +3,7 @@ package server;
 import servlet.ServletProcessor;
 import servlet.StaticResourceProcessor;
 
+import javax.servlet.ServletException;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,7 +19,7 @@ public class HttpServer {
     public static String WEB_ROOT = System.getProperty("user.dir")+"\\com.yansen.tomcat" + File.separator + "webroot";
     boolean shutdown = false;
 
-    void await() throws IOException {
+    void await() throws IOException, ClassNotFoundException, InstantiationException, ServletException, IllegalAccessException {
         // server start
         ServerSocket serverSocket = new ServerSocket(8086, 50, InetAddress.getByName("127.0.0.1"));
         System.out.println("main threadId=" + Thread.currentThread().getId()+"path:"+HttpServer.WEB_ROOT);
