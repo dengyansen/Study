@@ -1,4 +1,4 @@
-package designPatterns;
+package designPattern.filter;
 
 import java.util.ArrayList;
 import java.util.List;

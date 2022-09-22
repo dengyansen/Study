@@ -1,4 +1,4 @@
-package designPatterns;
+package designPattern.filter;
 
 public class User {
 	private String name;

@@ -1,4 +1,4 @@
-package designPatterns;
+package designPattern.filter;
 
 public class TestFilter {
 	public static void main(String[] args) {
