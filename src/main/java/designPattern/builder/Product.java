@@ -6,7 +6,7 @@ package designPattern.builder;
  */
 public class Product {
     private int age;
-    private Product(){
+    public Product(){
 
     }
     public int getAge() {
