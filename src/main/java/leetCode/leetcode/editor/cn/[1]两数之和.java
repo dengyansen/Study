@@ -30,10 +30,6 @@ package leetCode.leetcode.editor.cn;//给定一个整数数组 nums 和一个整
 //
 //
 //
-// 提示：
-//
-//
-// 2 <= nums.length <= 103
 // -109 <= nums[i] <= 109
 // -109 <= target <= 109
 // 只会存在一个有效答案
@@ -48,12 +44,20 @@ import java.util.HashMap;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public static void main(String[] args) {
-        int[] nums = {1, 3, 5};
-        int[] result = new Solution().twoSum(nums, 6);
-        for (Integer i : result) {
-            System.out.println(i);
-        }
+        new Solution().add(1,1);
+//        int[] nums = {1, 3, 5};
+//        int[] result = new Solution().twoSum(nums, 6);
+//        for (Integer i : result) {
+// 提示：
+//
+//
+// 2 <= nums.length <= 103
+//            System.out.println(i);
+//        }
 
+    }
+    int add(int a, int b){
+        System.out.println(a+b);
     }
 
     /**
