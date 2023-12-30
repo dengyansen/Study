@@ -24,7 +24,7 @@
         <module>com.yansen.spring</module>
         <module>com.yansen.test</module>
         <module>com.yansen.aspectJ</module>
-        <module>tomcat</module>
+        <module>com.yansen.study</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
